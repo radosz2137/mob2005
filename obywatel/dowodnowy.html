@@ -218,26 +218,7 @@ body, html {
                     }
                 };
                 </script>
-             <script>
-                    const godlo = document.getElementById('godlo');
-            
-                    // Dodajemy nasłuchiwanie na zmiany orientacji urządzenia
-                    window.addEventListener('deviceorientation', (event) => {
-                        const rotationX = event.beta;  // Kąt w osi X (nachylenie przód/tył)
-                        const rotationY = event.gamma; // Kąt w osi Y (nachylenie lewo/prawo)
-            
-                        // Wzmocnienie obrotów, żeby efekt był bardziej widoczny
-                        const amplifiedRotationX = rotationX * 15; // Zwiększenie wpływu ruchu w osi X
-                        const amplifiedRotationY = rotationY * 15; // Zwiększenie wpływu ruchu w osi Y
-            
-                        // Ograniczamy zakres obrotów do bardziej wyraźnych wartości
-                        const limitedRotationX = Math.min(Math.max(amplifiedRotationX, -100), 100);
-                        const limitedRotationY = Math.min(Math.max(amplifiedRotationY, -100), 100);
-            
-                        // Przekształcenie obrazu (obracamy w osi X i Y w zależności od ruchu telefonu)
-                        godlo.style.transform = `rotateX(${limitedRotationX}deg) rotateY(${limitedRotationY}deg)`;
-                    });
-                </script>
+          
             
             </body>
                 <p style="margin-left: 7px;">Rzeczpospolita<br>Polska</p>
